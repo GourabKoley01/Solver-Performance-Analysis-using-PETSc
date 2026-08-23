@@ -29,10 +29,12 @@ These contour plots visualize the 2D steady-state temperature distribution. As t
 * **Instability:** Solvers like **Chebyshev** and **CG** were only stable on coarse grids, diverging or producing highly inaccurate, non-physical results on finer meshes[cite: 1]. **MINRES** exhibited false convergence, displaying low residuals but physically incorrect solutions[cite: 1]. **FCG** showed poor convergence across all test cases[cite: 1].
 
 <div align="center">
+  <img src="result/contour_allsolvers_5x5.png" width="45%" alt="5x5 Contour">
   <img src="result/contour_allsolvers_10x10.png" width="45%" alt="10x10 Contour">
   <img src="result/contour_allsolvers_20x20.png" width="45%" alt="20x20 Contour">
   <img src="result/contour_allsolvers_40x40.png" width="45%" alt="40x40 Contour">
   <img src="result/contour_allsolvers_80x80.png" width="45%" alt="80x80 Contour">
+  <img src="result/contour_allsolvers_100x100.png" width="45%" alt="100x100 Contour">
   <img src="result/contour_allsolvers_250x250.png" width="90%" alt="250x250 Contour">
 </div>
 
@@ -42,6 +44,11 @@ The surface plots for the 5x5 and 10x10 grids provide a 3D perspective of the di
 <div align="center">
   <img src="result/surface_allsolvers_5x5.png" width="45%" alt="5x5 Surface Plot">
   <img src="result/surface_allsolvers_10x10.png" width="45%" alt="10x10 Surface Plot">
+  <img src="result/surface_allsolvers_20x20.png" width="45%" alt="20x20 Surface Plot">
+  <img src="result/surface_allsolvers_40x40.png" width="45%" alt="40x40 Surface Plot">
+  <img src="result/surface_allsolvers_80x80.png" width="45%" alt="80x80 Surface Plot">
+  <img src="result/surface_allsolvers_100x100.png" width="45%" alt="100x100 Surface Plot">
+  <img src="result/surface_allsolvers_250x250.png" width="45%" alt="250x250 Surface Plot">
 </div>
 
 ### 3. Computational Scaling: Iterations vs. Number of Nodes
@@ -52,6 +59,7 @@ This graph tracks the computational cost (iteration count) required for the solv
 
 <div align="center">
   <img src="result/iters_vs_nodes_labeled.png" width="70%" alt="Iterations vs Nodes">
+  <img src="result/time_vs_nodes_labeled.png" width="70%" alt="Time vs Nodes">
 </div>
 ## Tech Stack
 * **Framework:** PETSc
