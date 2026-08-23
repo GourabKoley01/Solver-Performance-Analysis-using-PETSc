@@ -1,0 +1,15 @@
+KSP_Type,PC_Type,Iter,Residual,Time(s)
+cg,none,4,5386.48,0.002662
+cg,bjacobi,2,9437.84,0.000581
+cg,asm,42,0.0481355,0.003250
+cg,gamg,3,152.589,0.010220
+gmres,none,4,2.2195e-09,0.000507
+gmres,bjacobi,11,0.0256389,0.001106
+gmres,asm,8,0.0450258,0.001638
+gmres,gamg,4,0.00884066,0.007046
+minres,none,4,2.45515e-09,0.000258
+minres,gamg,0,0,0.006886
+fcg,none,4,2.05822e-10,0.000543
+fcg,bjacobi,422,5.86714e+07,0.023414
+chebyshev,none,4,6.06411e+10,0.001078
+chebyshev,jacobi,30,0.0350858,0.001479
