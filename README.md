@@ -29,7 +29,7 @@ These contour plots visualize the 2D steady-state temperature distribution. As t
 * **Instability:** Solvers like **Chebyshev** and **CG** were only stable on coarse grids, diverging or producing highly inaccurate, non-physical results on finer meshes[cite: 1]. **MINRES** exhibited false convergence, displaying low residuals but physically incorrect solutions[cite: 1]. **FCG** showed poor convergence across all test cases[cite: 1].
 
 <div align="center">
-  <img src="assignment_5\new+test\testing\sub_plots\contour_allsolvers_10x10.jpg" width="45%" alt="10x10 Contour">
+  <img src="assignment_5/new+test/testing/sub_plots/contour_allsolvers_10x10.jpg" width="45%" alt="10x10 Contour">
   <img src="assignment_5\new+test\testing\sub_plots\contour_allsolvers_20x20.jpg" width="45%" alt="20x20 Contour">
   <img src="assignment_5\new+test\testing\sub_plots\contour_allsolvers_40x40.jpg" width="45%" alt="40x40 Contour">
   <img src="assignment_5\new+test\testing\sub_plots\contour_allsolvers_80x80.jpg" width="45%" alt="80x80 Contour">
