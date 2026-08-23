@@ -18,6 +18,42 @@ The following combinations were benchmarked across 7 different grid resolutions 
 * **Optimal Configuration:** The combination of **GMRES** paired with **ASM** or **GAMG** preconditioners delivered the most robust convergence rates.
 * **Stability:** This optimal configuration successfully resolved the numerical instabilities observed in CG and Chebyshev solvers when applied to finer computational meshes.
 
+## Visualizations & Performance Analysis
+
+The following visualizations demonstrate the stability, accuracy, and scaling behavior of various solver-preconditioner pairs across increasing grid resolutions.
+
+### 1. Steady-State Contour Plots (Grid Resolution Scaling)
+These contour plots visualize the 2D steady-state temperature distribution. As the grid resolution increases from 10x10 up to 250x250, the differences in solver stability become apparent[cite: 1]. 
+
+* **Robustness:** **GMRES** paired with **GAMG** or **ASM** preconditioners consistently maintained physical accuracy and robust convergence across all grid sizes[cite: 1].
+* **Instability:** Solvers like **Chebyshev** and **CG** were only stable on coarse grids, diverging or producing highly inaccurate, non-physical results on finer meshes[cite: 1]. **MINRES** exhibited false convergence, displaying low residuals but physically incorrect solutions[cite: 1]. **FCG** showed poor convergence across all test cases[cite: 1].
+
+<div align="center">
+  <img src="contour_allsolvers_10x10.jpg" width="45%" alt="10x10 Contour">
+  <img src="contour_allsolvers_20x20.jpg" width="45%" alt="20x20 Contour">
+  <img src="contour_allsolvers_40x40.jpg" width="45%" alt="40x40 Contour">
+  <img src="contour_allsolvers_80x80.jpg" width="45%" alt="80x80 Contour">
+  <img src="contour_allsolvers_250x250.jpg" width="90%" alt="250x250 Contour">
+</div>
+
+### 2. 3D Surface Plots (Coarse Grids)
+The surface plots for the 5x5 and 10x10 grids provide a 3D perspective of the diffusion profile. They clearly illustrate the applied boundary conditions: $\phi=100$ at $x=0$, $\phi=0$ at $x=L_x$, and insulated boundaries ($\frac{\partial\phi}{\partial y}=0$) at $y=0$ and $y=L_y$[cite: 1].
+
+<div align="center">
+  <img src="surface_allsolvers_5x5.jpg" width="45%" alt="5x5 Surface Plot">
+  <img src="surface_allsolvers_10x10.jpg" width="45%" alt="10x10 Surface Plot">
+</div>
+
+### 3. Computational Scaling: Iterations vs. Number of Nodes
+This graph tracks the computational cost (iteration count) required for the solvers to converge as the global degrees of freedom (nodes) increase.
+
+* Preconditioning drastically reduces the iteration count[cite: 1]. 
+* Un-preconditioned solvers experience exponential growth in iterations or fail entirely as the grid scales[cite: 1].
+
+<div align="center">
+  <img src="iters_vs_nodes_labeled.jpg" width="70%" alt="Iterations vs Nodes">
+</div>
+
 ## Tech Stack
 * **Framework:** PETSc
 * **Language:** C/C++ (or Python/mpi4py depending on your specific implementation)
